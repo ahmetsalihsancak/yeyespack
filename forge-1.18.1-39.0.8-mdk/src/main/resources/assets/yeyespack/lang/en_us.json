@@ -1,0 +1,13 @@
+{
+	"item.yeyespack.gold_currency": "Gold Currency",
+	"item.yeyespack.silver_currency": "Silver Currency",
+	"item.yeyespack.bronze_currency": "Bronze Currency",
+	
+	"item.yeyespack.trader_suit_chestplate": "Trader Suit Chestplate",
+	
+	"item.yeyespack.god_tier_sword": "GOD TIER SWORD",
+	
+	"itemGroup.yeyesPackTab": "Yeyes Pack",
+	
+	"entity.minecraft.villager.yeyespack.example": "Example Villager"
+}
