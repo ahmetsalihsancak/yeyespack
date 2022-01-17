@@ -56,9 +56,13 @@ public class ModEvents {
 		Random random = player.getRandom();
 		int i = 0;
 		String entityName = entity.getName().getString();
-		System.out.println(entityName);
 		switch (entityName) {
 		case "Cow":
+			i = random.nextInt(3) + 7;
+			currency = new ItemStack(ModItems.BRONZE_CURRENCY.get(), i);
+			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
+			return;
+		case "Pig":
 			i = random.nextInt(3) + 7;
 			currency = new ItemStack(ModItems.BRONZE_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
