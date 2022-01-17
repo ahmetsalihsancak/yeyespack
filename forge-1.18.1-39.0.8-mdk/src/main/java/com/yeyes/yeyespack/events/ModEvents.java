@@ -14,11 +14,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.item.trading.MerchantOffers;
+import net.minecraftforge.event.entity.EntityEvent;
+import net.minecraftforge.event.entity.item.ItemEvent;
 import net.minecraftforge.event.entity.living.LivingConversionEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.EntityInteract;
 import net.minecraftforge.event.village.VillagerTradesEvent;
+import net.minecraftforge.event.world.BlockEvent.EntityPlaceEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -33,27 +36,15 @@ public class ModEvents {
             ModVillager.fillTradeData();
         });
 	}
+
+	@SubscribeEvent
+	public void ff(EntityPlaceEvent e) {
+		System.out.println("plaffce " + e.getEntity().getName().getString());
+	}
 	
 	@SubscribeEvent
-	public static void marketVillagerAction (PlayerInteractEvent.EntityInteract e) {
-		Entity entity = e.getEntity();
-		if (entity.level.isClientSide()) {
-			return;
-		}
-		Player player = e.getPlayer();
-		Entity target = e.getTarget();
-		MerchantOffers offers = null;
-		Villager villager = (Villager)target;
-		offers = villager.getOffers();
-		if (player.hasEffect(MobEffects.HERO_OF_THE_VILLAGE)) {
-			System.out.println("22222222");
-			e.getPlayer().removeEffect(MobEffects.HERO_OF_THE_VILLAGE);
-		}
-		System.out.println(offers);
-		System.out.println(villager);
-		if (villager.getName().toString() == "Example Villager") {
-			System.out.println("33");
-		}
+	public void ff2(EntityEvent e) {
+		System.out.println("ff2 " + e.getEntity().getName().getString());
 	}
 	
 	@SubscribeEvent

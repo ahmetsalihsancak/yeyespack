@@ -2,6 +2,7 @@ package com.yeyes.yeyespack.item;
 
 import com.yeyes.yeyespack.YeyesPack;
 import com.yeyes.yeyespack.item.custom.ModArmorItem;
+import com.yeyes.yeyespack.item.custom.TraderVillagerItem;
 
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
@@ -45,6 +46,9 @@ public class ModItems {
 
     public static final RegistryObject<BlockItem> WOODWORKING_TABLE = ITEMS.register("woodworking_table",
             () -> new BlockItem(ModBlocks.WOODWORKING_TABLE.get(), new Item.Properties().tab(CreativeModeTabCreator.YEYES_PACK_TAB)));
+    
+    public static final RegistryObject<Item> TRADER_VILLAGER_ITEM = ITEMS.register("trader_villager_item",
+            () -> new TraderVillagerItem(new Item.Properties().tab(CreativeModeTabCreator.YEYES_PACK_TAB)));
     
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
