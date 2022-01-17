@@ -8,12 +8,15 @@ import com.yeyes.yeyespack.villager.ModVillager;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -21,10 +24,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 @Mod.EventBusSubscriber(modid = YeyesPack.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
-
-	/*private static Item gold_currency = ModItems.GOLD_CURRENCY.get();
-	private static Item silver_currency = ModItems.SILVER_CURRENCY.get();
-	private static Item bronze_currency = ModItems.BRONZE_CURRENCY.get();*/
 
 	private static ItemStack currency = null;
 	
@@ -57,7 +56,7 @@ public class ModEvents {
 		Random random = player.getRandom();
 		int i = 0;
 		String entityName = entity.getName().getString();
-		
+		System.out.println(entityName);
 		switch (entityName) {
 		case "Cow":
 			i = random.nextInt(3) + 7;
@@ -84,7 +83,7 @@ public class ModEvents {
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
-		case "CaveSpider":
+		case "Cave Spider":
 			i = random.nextInt(3) + 5;
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
@@ -104,13 +103,13 @@ public class ModEvents {
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
-		case "WitherBoss":
+		case "Wither":
 			i = random.nextInt(2) + 1;
 			currency = new ItemStack(ModItems.GOLD_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
-		case "EnderDragon":
-			i = random.nextInt(6) + 10;
+		case "Ender Dragon":
+			i = random.nextInt(4) + 7;
 			currency = new ItemStack(ModItems.GOLD_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
@@ -118,5 +117,4 @@ public class ModEvents {
 			return;
 		}
 	} 
-	
 }

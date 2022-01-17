@@ -10,7 +10,7 @@
 	{
 		"#":
 		{
-			"item": "yeyespack:silver_currency"
+			"item": "yeyespack:gold_currency"
 		},
 		"X":
 		{
@@ -19,6 +19,6 @@
 	},
 	"result":
 	{
-		"item": "yeyespack:trader_villager_item"
+		"item": "yeyespack:trader_suit_chestplate"
 	}
 }
