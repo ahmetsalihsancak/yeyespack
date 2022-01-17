@@ -33,7 +33,7 @@ public class TraderVillagerItem extends Item {
 				String pos = String.valueOf(blockPos.getX()) + " " + String.valueOf(blockPos.getY()+1) + " " + String.valueOf(blockPos.getZ());
 				String facing = " " + String.valueOf(player.xRotO) + " " + String.valueOf(player.yRotO);
 				String command = "/summon villager "
-						+ pos + facing
+						+ pos //+ facing
 						+ " {VillagerData:{profession:\"yeyespack:example\",level:99},PersistenceRequired:1,Silent:1,NoAI:1,CustomName:\"\\\"Trader\\\"\","
 						+ "	Offers:{"
 						+ "		Recipes:[{"
