@@ -2,7 +2,7 @@ package com.yeyes.yeyespack.item.custom;
 
 import java.util.Objects;
 
-import net.minecraft.server.MinecraftServer;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -27,9 +27,14 @@ public class TraderVillagerItem extends Item {
 		
 		if (!world.isClientSide) {
 			Player player = Objects.requireNonNull(context.getPlayer());
-			BlockState clickedBlock = world.getBlockState(context.getClickedPos());
+			BlockPos blockPos = context.getClickedPos();
+			BlockState clickedBlock = world.getBlockState(blockPos);
 			if (clickedBlock.getBlock() == Blocks.GLASS) {
-				String command = "/summon villager ~ ~1 ~ {VillagerData:{profession:cleric,level:99,type:plains},PersistenceRequired:1,Silent:1,NoAI:1,CustomName:\"\\\"Trader\\\"\","
+				String pos = String.valueOf(blockPos.getX()) + " " + String.valueOf(blockPos.getY()+1) + " " + String.valueOf(blockPos.getZ());
+				String facing = " " + String.valueOf(player.getRotationVector().x) + " " + String.valueOf(player.getRotationVector().y);
+				String command = "/summon villager "
+						+ pos // facing
+						+ " {VillagerData:{profession:\"yeyespack:example\",level:99},PersistenceRequired:1,Silent:1,NoAI:1,CustomName:\"\\\"Trader\\\"\","
 						+ "	Offers:{"
 						+ "		Recipes:[{"
 						+ "			buy:{"
@@ -58,9 +63,7 @@ public class TraderVillagerItem extends Item {
 						+ "			}]"
 						+ "		}"
 						+ "}";
-				System.out.println(context.toString() + "  stack:   " + stack.getDisplayName().getString());
 				world.getServer().getCommands().performCommand(player.createCommandSourceStack(), command);
-				
 			}
 		}
 		return super.onItemUseFirst(stack, context);

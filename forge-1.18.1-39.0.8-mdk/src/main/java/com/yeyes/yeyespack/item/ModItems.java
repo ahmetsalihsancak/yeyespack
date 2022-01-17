@@ -48,7 +48,7 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.WOODWORKING_TABLE.get(), new Item.Properties().tab(CreativeModeTabCreator.YEYES_PACK_TAB)));
     
     public static final RegistryObject<Item> TRADER_VILLAGER_ITEM = ITEMS.register("trader_villager_item",
-            () -> new TraderVillagerItem(new Item.Properties().tab(CreativeModeTabCreator.YEYES_PACK_TAB)));
+            () -> new TraderVillagerItem(getTraderVillagerItemProperties()));
     
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
@@ -67,4 +67,11 @@ public class ModItems {
 		return properties;
 	}
 	
+	private static Properties getTraderVillagerItemProperties() {
+		Item.Properties properties = new Item.Properties();
+		properties.defaultDurability(1);
+		properties.durability(1);
+		properties.tab(CreativeModeTabCreator.YEYES_PACK_TAB);
+		return properties;
+	}
 }
