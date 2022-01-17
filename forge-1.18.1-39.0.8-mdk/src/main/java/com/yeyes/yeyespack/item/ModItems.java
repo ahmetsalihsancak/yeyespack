@@ -42,7 +42,7 @@ public class ModItems {
 					getTraderSuitArmorProperties()));
 	
 	public static final RegistryObject<Item> GOD_TIER_SWORD = ITEMS.register("god_tier_sword", 
-			() -> new SwordItem(ModTiers.GOD_TIER, 2, 2f, new Item.Properties().tab(CreativeModeTabCreator.YEYES_PACK_TAB)));
+			() -> new SwordItem(ModTiers.GOD_TIER, 2222, 2f, new Item.Properties().tab(CreativeModeTabCreator.YEYES_PACK_TAB)));
 
     public static final RegistryObject<BlockItem> WOODWORKING_TABLE = ITEMS.register("woodworking_table",
             () -> new BlockItem(ModBlocks.WOODWORKING_TABLE.get(), new Item.Properties().tab(CreativeModeTabCreator.YEYES_PACK_TAB)));
