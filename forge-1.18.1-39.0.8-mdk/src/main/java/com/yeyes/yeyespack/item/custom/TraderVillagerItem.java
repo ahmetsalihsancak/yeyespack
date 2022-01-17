@@ -3,6 +3,7 @@ package com.yeyes.yeyespack.item.custom;
 import java.util.Objects;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -64,6 +65,7 @@ public class TraderVillagerItem extends Item {
 						+ "		}"
 						+ "}";
 				world.getServer().getCommands().performCommand(player.createCommandSourceStack(), command);
+				stack.setDamageValue(9999);
 			}
 		}
 		return super.onItemUseFirst(stack, context);
