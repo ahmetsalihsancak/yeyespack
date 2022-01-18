@@ -151,12 +151,12 @@ public class ModEvents {
 			return;
 			/*BOSSES*/
 		case "Wither":
-			i = random.nextInt(2) + 1;
+			i = random.nextInt(3) + 8;
 			currency = new ItemStack(ModItems.GOLD_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Ender Dragon":
-			i = random.nextInt(4) + 7;
+			i = random.nextInt(6) + 15;
 			currency = new ItemStack(ModItems.GOLD_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
