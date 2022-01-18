@@ -162,12 +162,12 @@ public class ModEvents {
 			return;
 			/*NETHER*/
 		case "Piglin":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(4) + 7;
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Zombified Piglin":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(4) + 7;
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
@@ -177,7 +177,7 @@ public class ModEvents {
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Hoglin":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(4) + 7;
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
@@ -187,7 +187,7 @@ public class ModEvents {
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Zoglin":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(4) + 7;
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
@@ -208,12 +208,12 @@ public class ModEvents {
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Elder Guardian":
-			i = random.nextInt(3) + 15;
+			i = random.nextInt(6) + 15;
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Guardian":
-			i = random.nextInt(3) + 10;
+			i = random.nextInt(6) + 10;
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
@@ -224,17 +224,17 @@ public class ModEvents {
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Ravager":
-			i = random.nextInt(3) + 27;
+			i = random.nextInt(3) + 20;
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Vindicator":
-			i = random.nextInt(3) + 12;
+			i = random.nextInt(6) + 10;
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Vex":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(4) + 7;
 			currency = new ItemStack(ModItems.SILVER_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
