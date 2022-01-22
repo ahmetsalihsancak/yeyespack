@@ -69,9 +69,6 @@ public class ModItems {
 	
 	private static Properties getTraderVillagerItemProperties() {
 		Item.Properties properties = new Item.Properties();
-		//properties.defaultDurability(1);
-		properties.durability(1);
-		properties.setNoRepair();
 		properties.tab(CreativeModeTabCreator.YEYES_PACK_TAB);
 		return properties;
 	}

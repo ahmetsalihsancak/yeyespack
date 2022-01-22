@@ -135,7 +135,7 @@ public class TraderVillagerItem extends Item {
 						+ "		}"
 						+ "}";
 				world.getServer().getCommands().performCommand(player.createCommandSourceStack(), command);
-				stack.setDamageValue(2);
+				stack.shrink(1);
 			}
 		}
 		return super.onItemUseFirst(stack, context);
