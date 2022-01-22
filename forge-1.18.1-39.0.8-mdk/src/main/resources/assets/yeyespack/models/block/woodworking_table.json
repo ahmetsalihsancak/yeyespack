@@ -1,12 +1,8 @@
 {
-  "parent": "minecraft:block/cube",
-  "textures": {
-    "particle": "yeyespack:block/woodworking_table_side",
-    "north": "yeyespack:block/woodworking_table_front",
-    "south": "yeyespack:block/woodworking_table_back",
-    "east": "yeyespack:block/woodworking_table_side",
-    "west": "yeyespack:block/woodworking_table_side2",
-    "up": "yeyespack:block/woodworking_table_top",
-    "down": "yeyespack:block/woodworking_table_top"
+	"parent": "minecraft:block/cube_bottom_top",
+  	"textures": {
+    	"side": "yeyespack:block/gardening_table_side",
+    	"bottom": "yeyespack:block/gardening_table_bottom",
+    	"top": "yeyespack:block/gardening_table_top"
   }
 }
