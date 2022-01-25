@@ -59,37 +59,37 @@ public class ModEvents {
 		switch (entityName) {
 		/*NEUTRAL MOBS*/
 		case "Goat":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(7) + 40;
 			currency = new ItemStack(ModItems.BRONZE_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Salmon":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(7) + 40;
 			currency = new ItemStack(ModItems.BRONZE_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Cod":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(7) + 40;
 			currency = new ItemStack(ModItems.BRONZE_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Chicken":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(7) + 40;
 			currency = new ItemStack(ModItems.BRONZE_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Cow":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(7) + 40;
 			currency = new ItemStack(ModItems.BRONZE_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Pig":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(7) + 40;
 			currency = new ItemStack(ModItems.BRONZE_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
 		case "Sheep":
-			i = random.nextInt(3) + 7;
+			i = random.nextInt(7) + 40;
 			currency = new ItemStack(ModItems.BRONZE_CURRENCY.get(), i);
 			e.getDrops().add(new ItemEntity(entity.getCommandSenderWorld(),epos.getX(), epos.getY()+1, epos.getZ(), currency));
 			return;
